@@ -27,7 +27,6 @@ public class LoginLocal {
         driver.findElement(By.name("password")).sendKeys("admin");
         driver.findElement(By.name("login")).click();
         wait.until(titleIs("My Store"));
-//        driver.findElement(By.xpath("//i[@='fa fa-sign-out fa-lg']")).click();
     }
 
     @After

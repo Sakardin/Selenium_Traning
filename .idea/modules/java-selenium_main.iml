@@ -3,9 +3,9 @@
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/../../java-selenium/build/classes/main" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../java-selenium/src/main">
-      <sourceFolder url="file://$MODULE_DIR$/../../java-selenium/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../java-selenium/src/main/resources" type="java-resource" />
+    <content url="file://$MODULE_DIR$/../../Java-Selenium/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../Java-Selenium/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../Java-Selenium/src/main/resources" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

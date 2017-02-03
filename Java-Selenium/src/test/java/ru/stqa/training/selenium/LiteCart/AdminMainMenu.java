@@ -13,30 +13,22 @@ public class AdminMainMenu extends LoginLocal{
 
 
     @Test
-
     public void menuClick() {
 
-        String fistPointMenu = "//ul[@id='box-apps-menu']/li";
+        String fistPointMenu = "#app-";
         String nextMenu = "li.selected+*";
-//        String nextSubMenu = "//ul[@class='docs']/li[@class='selected']/following-sibling::li[1]";
         String headerCssSelector = "td#content h1";
 
         LoginAdmin(new LoginData("admin", "admin"));
 
-        String currentLocator = fistPointMenu;
-
-        wd.findElement(By.xpath(currentLocator)).click();
+        wd.findElement(By.cssSelector(fistPointMenu)).click();
         assert wd.findElement(By.cssSelector(headerCssSelector)).isDisplayed();
-
-
-        currentLocator = nextMenu;
         do {
-            wd.findElement(By.cssSelector(currentLocator)).click();
+            wd.findElement(By.cssSelector(nextMenu)).click();
             assert wd.findElement(By.cssSelector(headerCssSelector)).isDisplayed();
 
         } while (isElementPresent(wd, nextMenu));
     }
-
 
         boolean isElementPresent(WebDriver wd, String cssSelector) {
             try {
@@ -45,10 +37,6 @@ public class AdminMainMenu extends LoginLocal{
             } catch (NoSuchElementException ex) {
                 return false;
             }
-
-
-
-
 //        Читерский способ ))
 //        wd.findElement(By.xpath("//span[2]")).click();
 //        assert wd.findElement(By.cssSelector("#content > h1")).isDisplayed();

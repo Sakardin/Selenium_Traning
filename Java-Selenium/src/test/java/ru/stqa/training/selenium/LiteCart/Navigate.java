@@ -5,7 +5,7 @@ package ru.stqa.training.selenium.LiteCart;
  */
 public class Navigate extends TestBase {
 
-    protected void openHomePage() {
-        wd.get("http://localhost/litecart/en/");
+    protected void openPage(String url) {
+        wd.get( url );
     }
 }

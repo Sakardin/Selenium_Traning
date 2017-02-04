@@ -10,12 +10,13 @@ test.describe('Local Login', function() {
     });
 
 
+
     test.it('find sticker', function*(){
-        driver.get('http://localhost/litecart/');
+        driver.get('http://localhost/litecart/public_html/en/');
         driver.wait(until.titleIs('Online Store | My Store'), 1000);
         var pics = driver.findElements(By.css("li.product"));
         var sticks = driver.findElements(By.css("div.sticker"));
-        assertEqual(pics.length(), sticks.length());
+        assert.equal(pics.length,sticks.length);
     });
 
 

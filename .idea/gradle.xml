@@ -9,7 +9,7 @@
         <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/java-selenium" />
+            <option value="$PROJECT_DIR$/Java-Selenium" />
           </set>
         </option>
       </GradleProjectSettings>

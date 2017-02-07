@@ -15,7 +15,7 @@ public class StickerTest extends Navigate {
     @Test
 //    равное количество
     public void stickerTest() {
-        openPage( "http://localhost/litecart/public_html/en/" );
+        openPage( "http://localhost/litecart/en/" );
         List<WebElement> pictures = wd.findElements(By.cssSelector("li.product"));
         List<WebElement> stickers = wd.findElements(By.cssSelector("div.sticker"));
         Assert.assertEquals(pictures.size(), stickers.size());
@@ -24,7 +24,7 @@ public class StickerTest extends Navigate {
     @Test
 //    Есть у каждого картинки
     public void stickerInside() {
-        openPage( "http://localhost/litecart/public_html/en/" );
+        openPage( "http://localhost/litecart/en/" );
         List<WebElement> pics = wd.findElements(By.cssSelector("li.product"));
         for (WebElement pic : pics) {
             assert pic.findElement(By.cssSelector("div.sticker")).isDisplayed();

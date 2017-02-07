@@ -18,9 +18,5 @@
         <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="java-selenium_main" target="1.8" />
-      <module name="java-selenium_test" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

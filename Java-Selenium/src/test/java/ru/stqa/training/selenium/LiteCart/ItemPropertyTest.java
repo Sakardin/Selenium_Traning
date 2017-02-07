@@ -19,7 +19,7 @@ public class ItemPropertyTest extends Navigate{
 
     public void itemPropertyTest(){
 // HP Duck
-        openPage( "http://localhost/litecart/public_html/en/" );
+        openPage( "http://localhost/litecart/en/" );
         WebElement homePageDuck = wd.findElement( By.cssSelector( "#box-campaigns > div > ul > li " ) );
         String mainDuckText = homePageDuck.findElement(By.className("name")).getText() ;
         String mainDuckRegularPrice = homePageDuck.findElement( By.className( "regular-price" ) ).getText();
@@ -29,9 +29,8 @@ public class ItemPropertyTest extends Navigate{
         String colorCompainPrice = homePageDuck.findElement( By.className( "campaign-price" ) ).getCssValue( "color" );
         String lineRegularPrice = homePageDuck.findElement( By.className( "regular-price" ) ).getTagName();
 //        String dimensionRegularPrice = homePageDuck.findElement( By.className( "regular-price" ) ).getAttribute( "font-size" );
-//
-//        Dimension dimensionCompainPrice = homePageDuck.findElement( By.className( "campaign-price" ) ).getSize();
-//        Assert.assertThat( dimensionRegularPrice < dimensionCompainPrice );
+
+//        assert dimensionRegularPrice.equals("0.8em");
         assert lineRegularPrice.equals( "s" );
         assert mainDuckCompainPriceStrong.equals( "strong" );
 
@@ -44,6 +43,7 @@ public class ItemPropertyTest extends Navigate{
         String detailDuckCompainPrice = wd.findElement( By.cssSelector( ".campaign-price" ) ).getText();
         String detailDuckCompainPriceStrong = wd.findElement( By.cssSelector( ".campaign-price" ) ).getTagName();
         String detailLineRegularPrice = wd.findElement( By.className( "regular-price" ) ).getTagName();
+//        String sizeRegularPrice = wd.findElement(By.cssSelector("regular-price")).getAttribute("font-size");
 
 
         assert mainDuckText.equals( detailDuckText );
@@ -51,6 +51,7 @@ public class ItemPropertyTest extends Navigate{
         assert mainDuckCompainPrice.equals( detailDuckCompainPrice );
         assert detailLineRegularPrice.equals( "s" );
         assert detailDuckCompainPriceStrong.equals( "strong" );
+//        assert sizeRegularPrice.equals("16px");
 
 
     }

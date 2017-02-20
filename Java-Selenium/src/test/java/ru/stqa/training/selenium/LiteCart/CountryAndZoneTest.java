@@ -1,11 +1,7 @@
 package ru.stqa.training.selenium.LiteCart;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.junit.*;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.*;
@@ -15,6 +11,8 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.titleContains;
 /**
  * Created by Sakardin on 06.02.2017.
  */
+
+
 public class CountryAndZoneTest extends LoginLocal {
 
     @Before
@@ -72,6 +70,14 @@ public class CountryAndZoneTest extends LoginLocal {
         }
 
 
+    }
+    boolean isElementPresent(WebDriver wd, String cssSelector) {
+        try {
+            wd.findElement(By.cssSelector(cssSelector));
+            return true;
+        } catch (org.openqa.selenium.NoSuchElementException ex) {
+            return false;
+        }
     }
 
 
